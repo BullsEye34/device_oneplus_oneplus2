@@ -73,9 +73,6 @@ restorecon -R /sys/devices/system/cpu # must restore after interactive
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/powersave_bias 1
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 302400
 
-# restore A57's max
-copy /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_max_freq /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-
 # Configure core_ctl module parameters
 write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 4
 write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 0
